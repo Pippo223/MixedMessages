@@ -29,39 +29,39 @@ function generateRandomNumber(num) {
     output: process.stdout
   });
    
-  readline.question('Warning! Offensive content. \nIf you find yo mama jokes offensive, please do not proceed.\nWhich Yo mama joke do you want to see?\nEnter "fat","stupid" or "ugly": ', choice => {
+  readline.question('Which Dumbo description do you want to see? \nEnter "fat","stupid" or "ugly": ', 
+  choice => {
 
     let optionIndex = 0
    switch (choice) {
     case 'fat': 
     {
         optionIndex = generateRandomNumber(fat.length)
-        returnedJoke = `\nYo mama's so ${choice}, ${fat[optionIndex]}`
+        returnedJoke = `\nDumbo's so ${choice}, ${fat[optionIndex]}`
     }
     break
     case 'stupid': 
     {
         optionIndex = generateRandomNumber(stupid.length)
-        returnedJoke = `\nYo mama's so ${choice}, ${stupid[optionIndex]}`
+        returnedJoke = `\nDumbo's so ${choice}, ${stupid[optionIndex]}`
     }
     break
     case 'ugly': 
     {
         optionIndex = generateRandomNumber(ugly.length)
-        returnedJoke = `\nYo mama's so ${choice}, ${ugly[optionIndex]}`
+        returnedJoke = `\nDumbo's so ${choice}, ${ugly[optionIndex]}`
     }
     break
     default: returnedJoke = `Enter 'fat', 'stupid' or 'ugly'`
     break
   }
  
-function logYomama(joke) {
+function logDumboDesc(joke) {
     const logged = joke
     console.log(logged)
 }
 
-logYomama(returnedJoke)
+logDumboDesc(returnedJoke)
 
     readline.close();
   });
-
